@@ -2,6 +2,8 @@
 
 A full-stack video conferencing application built with the MERN stack (MongoDB, Express, React, Node.js) and WebRTC/Socket.io for real-time communication.
 
+**Live Demo:** [https://project-3bu5x.vercel.app/](https://project-3bu5x.vercel.app/)
+
 ## Features
 
 - **User Authentication:** Secure Sign Up and Log In functionality.
@@ -23,7 +25,7 @@ A full-stack video conferencing application built with the MERN stack (MongoDB, 
 
 ### 2. Clone the Repository
 \`\`\`bash
-git clone <your-repository-url>
+git clone https://github.com/Abhijeet1102/Zoom.git
 cd Zoom
 \`\`\`
 
@@ -62,4 +64,22 @@ cd frontend
 npm start
 \`\`\`
 
-The frontend will start on \`http://localhost:3000\` (or the next available port), and the backend will listen on \`http://localhost:8000\`.
+The frontend will start on \`http://localhost:3000\`, and the backend will listen on \`http://localhost:8000\`.
+
+## Deployment Guide
+
+### Deploying the Backend (Render)
+1. Create a New Web Service on Render.
+2. Select the repository and set the **Root Directory** to `backend`.
+3. Build Command: `npm install`
+4. Start Command: `npm start`
+5. Add an Environment Variable: `MONGO_URI` with your MongoDB connection string.
+6. Deploy and copy the live backend URL.
+
+### Deploying the Frontend (Vercel)
+1. Create a New Project on Vercel and import the repository.
+2. In Project Settings > Build & Deployment, set the **Root Directory** to `frontend`.
+3. In Project Settings > Environments, add the following variables:
+   - `REACT_APP_BACKEND_URL`: `your_render_backend_url`
+   - `CI`: `false` (to prevent warnings from failing the build)
+4. Redeploy the project.
